@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dead Code | مشروع الدرون الذكي</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:radial-gradient(circle at top,#0b0f14,#000);
+    color:white;
+    direction:rtl;
+    overflow-x:hidden;
+    scroll-behavior:smooth;
+}
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 28px;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(0,229,255,0.2);
+    z-index:1000;
+}
+
+.logo{color:#00e5ff;font-size:22px;font-weight:900;}
+.code{color:#aaa;font-size:12px;}
+
+nav a{
+    color:#ccc;
+    margin:0 8px;
+    text-decoration:none;
+    font-size:13px;
+}
+nav a:hover{color:#00e5ff;}
+
+.hero{
+    text-align:center;
+    margin-top:130px;
+}
+
+.hero h1{
+    font-size:40px;
+    color:#00e5ff;
+}
+
+.typing{min-height:25px;color:#bbb;margin-top:10px;}
+
+.btn{
+    margin-top:15px;
+    padding:10px 18px;
+    background:#00e5ff;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.section{
+    width:88%;
+    max-width:1000px;
+    margin:70px auto;
+    padding:25px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(0,229,255,0.15);
+    border-radius:16px;
+}
+
+.section h2{color:#00e5ff;margin-bottom:12px;}
+
+.card{
+    line-height:2;
+    color:#ddd;
+    font-size:14px;
+}
+
+.img-box{
+    margin-top:12px;
+    height:180px;
+    border-radius:12px;
+    border:1px dashed rgba(0,229,255,0.4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#777;
+    font-size:14px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#777;
+    margin-top:50px;
+}
+
+/* DRONE */
+.scene{
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+}
+
+.drone{
+    width:180px;
+    height:180px;
+    position:relative;
+    animation:fly 3s infinite ease-in-out;
+}
+
+.body{
+    width:70px;height:70px;
+    background:#111;
+    border-radius:12px;
+    position:absolute;
+    top:55px;left:55px;
+    box-shadow:0 0 18px #00e5ff;
+}
+
+.arm{
+    width:110px;height:6px;
+    background:#00e5ff;
+    position:absolute;
+    top:85px;left:35px;
+}
+
+.arm2{transform:rotate(90deg);}
+
+.prop{
+    width:22px;height:22px;
+    border-radius:50%;
+    border:2px solid #aaa;
+    position:absolute;
+    animation:spin .2s linear infinite;
+}
+
+.p1{top:5px;left:5px;}
+.p2{top:5px;right:5px;}
+.p3{bottom:5px;left:5px;}
+.p4{bottom:5px;right:5px;}
+
+@keyframes fly{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+@keyframes spin{
+    100%{transform:rotate(360deg);}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Dead Code</div>
+
+<nav>
+<a href="#mission">المهمة</a>
+<a href="#objectives">الأهداف</a>
+<a href="#energy">الطاقة</a>
+<a href="#vision">الرؤية</a>
+<a href="#control">التحكم</a>
+<a href="#ai">الذكاء</a>
+<a href="#circuits">الدوائر</a>
+</nav>
+
+<div class="code">CIA3375G</div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+<h1>مشروع الدرون الذكي باستخدام الذكاء الاصطناعي والطاقة الشمسية</h1>
+<div class="typing" id="typing"></div>
+<button class="btn" onclick="window.print()">تحميل التقرير PDF</button>
+</div>
+
+<!-- DRONE -->
+<div class="scene">
+<div class="drone">
+<div class="body"></div>
+<div class="arm"></div>
+<div class="arm arm2"></div>
+<div class="prop p1"></div>
+<div class="prop p2"></div>
+<div class="prop p3"></div>
+<div class="prop p4"></div>
+</div>
+</div>
+
+<!-- MISSION -->
+<div class="section" id="mission">
+<h2>المهمة</h2>
+<div class="card">
+تصميم درون ذكي ذاتي التشغيل للمراقبة الجوية والبحث والإنقاذ في المدن
+و البيئات الخطرة باستخدام الذكاء الاصطناعي بدون تدخل بشري.
+</div>
+<div class="img-box">الرسم اليدوي للدرون</div>
+</div>
+
+<!-- OBJECTIVES -->
+<div class="section" id="objectives">
+<h2>الأهداف</h2>
+<div class="card">
+- مراقبة جوية لحظية<br>
+- دعم البحث والإنقاذ<br>
+- العمل في المدن و البيئات الخطرة<br>
+- تطوير نظام طيران ذكي
+</div>
+</div>
+
+<!-- ENERGY -->
+<div class="section" id="energy">
+<h2>نظام الطاقة الشمسية</h2>
+<div class="card">
+الدرون يعمل نهارًا عبر الطاقة الشمسية ويتم شحن البطارية،
+وعند الليل يعتمد على البطارية فقط لضمان عمل 24/7.
+<br><br>
+المكونات:<br>
+Solar Panels → MPPT Charger → Li-Po Battery
+</div>
+<div class="img-box">نظام الطاقة الشمسية</div>
+</div>
+
+<!-- VISION -->
+<div class="section" id="vision">
+<h2>نظام الرؤية الذكية</h2>
+<div class="card">
+- كاميرا HD نهارية<br>
+- كاميرا IR للرؤية الليلية<br>
+- كاميرا حرارية Thermal<br><br>
+
+يقوم النظام باختيار الكاميرا المناسبة تلقائيًا
+وتحليل الصور لاكتشاف الأشخاص والحرائق.
+</div>
+<div class="img-box">نظام الكاميرات</div>
+</div>
+
+<!-- CONTROL -->
+<div class="section" id="control">
+<h2>نظام التحكم</h2>
+<div class="card">
+نظام مغلق الحلقة (Closed Loop):
+<br><br>
+MPU6050 → ESP32 → ESC → Motors → Feedback
+<br><br>
+يضمن:
+- استقرار الطيران<br>
+- تصحيح الميلان<br>
+- التحكم الذاتي
+</div>
+</div>
+
+<!-- AI -->
+<div class="section" id="ai">
+<h2>الذكاء الاصطناعي</h2>
+<div class="card">
+- اكتشاف الأشخاص<br>
+- تحليل الصور<br>
+- تتبع الأهداف<br>
+- اختيار الكاميرا المناسبة<br>
+- تجنب العوائق مستقبلًا
+</div>
+</div>
+
+<!-- CIRCUITS -->
+<div class="section" id="circuits">
+<h2>الدوائر الكهربائية</h2>
+<div class="card">
+Battery → ESC → Motors<br>
+ESP32 → Sensors → Cameras
+</div>
+<div class="img-box">الدائرة الإلكترونية (Fritzing / EasyEDA)</div>
+</div>
+
+<!-- TEAM -->
+<div class="section">
+<h2>فريق العمل</h2>
+<div class="card">
+<b>Dead Code Team</b><br>
+CIA3375G<br>
+مشروع درون ذكي بالذكاء الاصطناعي والطاقة الشمسية
+</div>
+</div>
+
+<footer>
+Dead Code © 2026
+</footer>
+
+<script>
+const text = "Autonomous AI Solar Drone System";
+let i = 0;
+
+function typing(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing, 40);
+}
+}
+typing();
+</script>
+
+</body>
+</html>
